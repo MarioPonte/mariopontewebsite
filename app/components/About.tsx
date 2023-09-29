@@ -22,7 +22,7 @@ export default function About() {
                                 at the moment I am only focused on <strong>Web Development</strong>.
                             </p>
                             <p>
-                                I'm passionate about everything that involves computer engineering and I'm always interested in
+                                I&apos;m passionate about everything that involves computer engineering and I&apos;m always interested in
                                 learning new technologies.
                             </p>
                         </div>
