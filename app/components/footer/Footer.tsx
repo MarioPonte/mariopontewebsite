@@ -4,7 +4,7 @@ import Container from "../Container";
 
 export const Footer = () => {
     return (
-        <div className="text-center bg-indigo-800 py-4">
+        <div className="sticky top-[100vh] text-center bg-indigo-800 py-4">
             <div className="">
                 <Container>
                     <div className="">
