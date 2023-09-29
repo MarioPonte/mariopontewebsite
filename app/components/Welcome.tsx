@@ -3,9 +3,9 @@ import Container from "./Container";
 
 export default function Welcome() {
     return (
-        <section>
+        <section className="h-screen">
             <Container>
-                <div className="flex flex-wrap justify-center items-center gap-10 md:gap-32">
+                <div className="my-20 flex flex-wrap justify-center items-center gap-10 md:gap-32">
                     <div>
                         <div className='text-8xl font-bold'>
                             Mário Ponte
