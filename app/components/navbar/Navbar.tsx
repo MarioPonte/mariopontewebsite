@@ -12,8 +12,8 @@ export const Navbar = () => {
                             <Link href="/"><LogoMario className="h-14 fill-white" /></Link>
                         </div>
                         <nav className="space-x-6 font-semibold">
-                            <Link href="/">Home</Link>
-                            <Link href="/">About</Link>
+                            <Link href="#">Home</Link>
+                            <Link href="#about">About</Link>
                         </nav>
                     </div>
                 </Container>

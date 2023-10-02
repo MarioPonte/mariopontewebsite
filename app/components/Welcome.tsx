@@ -3,9 +3,9 @@ import Container from "./Container";
 
 export default function Welcome() {
     return (
-        <section className="h-screen">
+        <section id="welcome" className="h-screen">
             <Container>
-                <div className="my-20 flex flex-wrap justify-center items-center md:gap-10">
+                <div className="py-20 flex flex-wrap justify-center items-center md:gap-10">
                     <div>
                         <div className='sm:text-4xl md:text-8xl text-4xl font-bold'>
                             Mário Ponte
