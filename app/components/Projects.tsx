@@ -1,6 +1,7 @@
 'use client';
 
 import Container from "./Container";
+import ProjectsCard from "./ProjectsCard";
 
 export default function Projects() {
 
@@ -17,8 +18,14 @@ export default function Projects() {
                         inspiration in my work and see how my skills and knowledge can be useful for your own projects.
                     </p>
                 </div>
-                <div className="my-20 flex flex-wrap-reverse justify-center items-center gap-10 md:gap-32">
+                <div>
+                    <div className="grid gap-8 lg:grid-cols-3">
+                        <ProjectsCard/>
+                        <ProjectsCard/>
+                        <ProjectsCard/>
+                    </div>
                 </div>
+                
             </Container>
         </section>
     )
