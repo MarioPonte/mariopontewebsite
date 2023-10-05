@@ -14,11 +14,12 @@ export const Navbar = () => {
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <div>
-                            <Link href="/"><LogoMario className="h-14 fill-white" /></Link>
+                            <Link aria-label="Page Logo" href="/"><LogoMario className="h-14 fill-white" /></Link>
                         </div>
                         <div className="md:hidden">
                             <button
                                 className="p-2 text-gray-700"
+                                aria-label="menu"
                                 onClick={() => setNavbar(!navbar)}
                             >
                                 {navbar ? (
@@ -32,8 +33,7 @@ export const Navbar = () => {
                 </div>
                 <div>
                     <div
-                        className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'block' : 'hidden'
-                            }`}
+                        className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'block' : 'hidden'}`}
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 font-semibold">
                             <li className="text-white">
