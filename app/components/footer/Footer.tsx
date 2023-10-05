@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 import Container from "../Container";
 import { LogoMario } from '@/app/SVGFiles';
-import { BsFacebook, BsLinkedin, BsGithub, BsWhatsapp, BsDiscord } from 'react-icons/bs';
+import { BsFacebook, BsLinkedin, BsGithub, BsWhatsapp } from 'react-icons/bs';
 import Link from 'next/link';
 
 export const Footer = () => {
