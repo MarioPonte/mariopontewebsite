@@ -1,6 +1,6 @@
 'use client';
 
-import Container from "./Container";
+import Container from "../Container";
 import { AiFillHtml5 } from "react-icons/ai";
 import { DiCss3Full, DiNodejs } from "react-icons/di";
 import { BiLogoJavascript, BiLogoReact } from "react-icons/bi";

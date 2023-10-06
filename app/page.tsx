@@ -1,6 +1,7 @@
 import About from "./components/About";
-import Projects from "./components/Projects";
-import Technologies from "./components/Technologies";
+import Portfolio from "./components/portfolio/Portfolio";
+import Services from "./components/Services";
+import Technologies from "./components/technologies/Technologies";
 import Welcome from "./components/Welcome";
 
 export default function Home() {
@@ -9,7 +10,8 @@ export default function Home() {
       <Welcome/>
       <About/>
       <Technologies/>
-      <Projects/>
+      <Portfolio/>
+      <Services/>
     </>
   )
 }

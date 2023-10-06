@@ -1,11 +1,11 @@
 'use client';
 
 import Link from "next/link";
-import Container from "./Container";
+import Container from "../Container";
 import ProjectsCard from "./ProjectsCard";
 import { BsGithub } from 'react-icons/bs';
 
-export default function Projects() {
+export default function Portfolio() {
 
     return (
         <section id="portfolio" className="pt-20 h-auto">
