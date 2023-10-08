@@ -8,7 +8,7 @@ interface ProjectsCardProps {
     image: string;
 }
 
-const ProjectsCar: React.FC<ProjectsCardProps> = ({
+const ProjectsCard: React.FC<ProjectsCardProps> = ({
     title,
     image,
 }) => {
@@ -35,4 +35,4 @@ const ProjectsCar: React.FC<ProjectsCardProps> = ({
     )
 }
 
-export default ProjectsCar;
+export default ProjectsCard;

@@ -1,8 +1,7 @@
 'use client';
 
 import Container from "./Container";
-import { PiDatabaseThin } from 'react-icons/pi';
-import { CgWebsite } from 'react-icons/cg';
+import ServicesCard from "./ServicesCard";
 
 export default function Services() {
 
@@ -17,22 +16,11 @@ export default function Services() {
                         Get to know some of my services and find out what I can do for you!
                     </p>
                 </div>
-                <div className="grid gap-8 lg:grid-cols-3">
-
-                    <div className="bg-slate-950 p-8 rounded-xl w-full border-[1px] border-slate-950 hover:border-white transition duration-500">
-                        <div className="text-6xl">
-                            <PiDatabaseThin/>
-                        </div>
-                        <div>
-                            <div className="font-bold text-2xl mb-1">
-                                Creation of Management Systems
-                            </div>
-                            <div className="text-lg">
-                                I can create a web application to manage your business data.
-                            </div>
-                        </div>
-                    </div>
-                    
+                <div className="grid gap-8 lg:grid-cols-4">
+                    <ServicesCard title="Creation of Management Systems" description="I can create a web application to manage your business data."/>
+                    <ServicesCard title="Creation of Websites" description="I can create a website for your brand/company with all the features you want."/>
+                    <ServicesCard title="E-Commerce" description="I can create an online store for your business with all the tools you need."/>
+                    <ServicesCard title="Design" description="It's not my main focus, but I do have experience in creating graphic arts. I can create logos, banners, flyers, etc."/>
                 </div>
 
             </Container>
