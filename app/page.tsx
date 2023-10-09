@@ -1,4 +1,5 @@
 import About from "./components/About";
+import Contacts from "./components/Contacts";
 import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/Services";
 import Technologies from "./components/technologies/Technologies";
@@ -12,6 +13,7 @@ export default function Home() {
       <Technologies/>
       <Portfolio/>
       <Services/>
+      <Contacts/>
     </>
   )
 }
