@@ -1,6 +1,5 @@
 import Container from "./Container";
 import Image from "next/image";
-import Link from "next/link";
 import { FiFileText } from "react-icons/fi";
 
 export default function About() {
@@ -27,9 +26,9 @@ export default function About() {
                             </p>
                         </div>
 
-                        <Link href="CV-MP.pdf" target="_blank" download="CV-MP.pdf" className="inline-flex items-center sm:text-xs md:text-sm text-xs bg-indigo-800 font-semibold sm:py-1 md:py-2 py-1 sm:px-2 md:px-4 px-2 sm:rounded-lg md:rounded-xl rounded-lg">
+                        <a href="CV-MP.pdf" target="_blank" className="inline-flex items-center sm:text-xs md:text-sm text-xs bg-indigo-800 font-semibold sm:py-1 md:py-2 py-1 sm:px-2 md:px-4 px-2 sm:rounded-lg md:rounded-xl rounded-lg">
                             <FiFileText className="mr-2" /> Download CV
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </Container>
