@@ -12,7 +12,7 @@ export default function Contacts() {
                         Contacts
                     </div>
                     <p className="text-lg mt-8">
-                        Contact me to discuss your projects, ideas or questions. I'm always happy to help and answer any questions you may have.
+                        Contact me to discuss your projects, ideas or questions. I&apos;m always happy to help and answer any questions you may have.
                     </p>
                 </div>
                 <div className="grid gap-40 lg:grid-cols-2">
