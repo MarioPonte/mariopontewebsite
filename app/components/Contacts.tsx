@@ -1,6 +1,8 @@
 'use client';
 
 import Container from "./Container";
+import Input from "./inputs/Input";
+import Textarea from "./inputs/Textarea";
 
 export default function Contacts() {
 
@@ -17,19 +19,14 @@ export default function Contacts() {
                 </div>
                 <div className="grid gap-40 lg:grid-cols-2">
 
-                    <input type="text" name="name" id="name" placeholder="Name" 
-                        className="
-                            peer
-                            w-full
-                            p-4
-                            bg-indigo-950
-                            border-2
-                            rounded-xl
-                            outline-none
-                            transition
-                            placeholder-neutral-200
-                        " 
-                    />
+                    <div>
+                        <Input id="name" placeholder="Name"/>
+                        <Input id="email" placeholder="Email"/>
+                        <Textarea id="message" placeholder="Message"/>
+                        <button className="w-full my-2 p-4 bg-indigo-800 border-2 border-indigo-900 rounded-xl text-xl font-semibold">
+                            Send
+                        </button>
+                    </div>
 
                 </div>
 
