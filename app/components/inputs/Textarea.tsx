@@ -11,10 +11,12 @@ const Textarea: React.FC<TextareaProps> = ({
 }) => {
 
     return (
-        <textarea id={id} placeholder={placeholder} maxLength={1000}
+        <textarea id={id} placeholder={placeholder} maxLength={1000} required
             className="
                 peer
                 w-full
+                h-40
+                resize-none
                 my-2
                 p-4
                 bg-indigo-950

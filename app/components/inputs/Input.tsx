@@ -11,7 +11,7 @@ const Input: React.FC<InputProps> = ({
 }) => {
 
     return (
-        <input type="text" id={id} placeholder={placeholder}
+        <input type="text" id={id} placeholder={placeholder} required
             className="
                 peer
                 w-full

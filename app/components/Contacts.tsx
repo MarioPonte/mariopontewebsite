@@ -3,6 +3,11 @@
 import Container from "./Container";
 import Input from "./inputs/Input";
 import Textarea from "./inputs/Textarea";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { IoLocationSharp } from "react-icons/io5";
+import { LogoMario } from "../SVGFiles";
+import Link from "next/link";
 
 export default function Contacts() {
 
@@ -17,16 +22,36 @@ export default function Contacts() {
                         Contact me to discuss your projects, ideas or questions. I&apos;m always happy to help and answer any questions you may have.
                     </p>
                 </div>
-                <div className="grid gap-40 lg:grid-cols-2">
+                <div className="grid gap-10 sm:gap-10 md:gap-40 lg:grid-cols-2 items-center">
 
                     <div>
-                        <Input id="name" placeholder="Name"/>
-                        <Input id="email" placeholder="Email"/>
-                        <Textarea id="message" placeholder="Message"/>
-                        <button className="w-full my-2 p-4 bg-indigo-800 border-2 border-indigo-900 rounded-xl text-xl font-semibold">
-                            Send
-                        </button>
+                        <form action="" method="post">
+                            <Input id="name" placeholder="Name"/>
+                            <Input id="email" placeholder="Email"/>
+                            <Textarea id="message" placeholder="Message"/>
+                            <button type="submit" className="w-full my-2 p-4 bg-indigo-800 border-2 border-indigo-900 rounded-xl text-xl font-semibold">
+                                Send
+                            </button>
+                        </form>
                     </div>
+
+                    <div className="bg-slate-950 p-10 rounded-xl text-xs sm:text-xs md:text-lg text-neutral-400 h-fit flex flex-wrap gap-8">
+                        <div className="space-y-6 w-fit">
+                            <a href="tel:964158481" className="flex items-center hover:text-white cursor-pointer duration-300">
+                                <FaPhoneAlt className="mr-2" />(+351) 964 158 481
+                            </a>
+                            <a href="mailto:ponteolavo30@gmail.com" className="flex items-center hover:text-white cursor-pointer duration-300">
+                                <MdEmail className="mr-2" />ponteolavo30@gmail.com
+                            </a>
+                            <a href="https://maps.app.goo.gl/voYK9h47sJzF6ckaA" target="_Blank" className="flex items-center hover:text-white cursor-pointer duration-300">
+                                <IoLocationSharp className="mr-2" />Vale Judeu, Loulé
+                            </a>
+                        </div>
+                        <div>
+                            <LogoMario className="h-20 sm:h-20 md:h-32 fill-white"/>
+                        </div>
+                    </div>
+
 
                 </div>
 
