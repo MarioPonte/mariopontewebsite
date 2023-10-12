@@ -3,15 +3,21 @@
 interface InputProps {
     id: string;
     placeholder: string;
+    register: any;
 }
 
 const Input: React.FC<InputProps> = ({
     id,
     placeholder,
+    register
 }) => {
 
     return (
-        <input type="text" id={id} placeholder={placeholder} required
+        <input
+            type="text"
+            id={id}
+            placeholder={placeholder}
+            required
             className="
                 peer
                 w-full
@@ -24,6 +30,7 @@ const Input: React.FC<InputProps> = ({
                 transition
                 placeholder-neutral-200
             "
+            {...register(id)}
         />
     )
 }

@@ -3,11 +3,13 @@
 interface TextareaProps {
     id: string;
     placeholder: string;
+    register:any;
 }
 
 const Textarea: React.FC<TextareaProps> = ({
     id,
     placeholder,
+    register
 }) => {
 
     return (
@@ -26,6 +28,7 @@ const Textarea: React.FC<TextareaProps> = ({
                 transition
                 placeholder-neutral-200
             "
+            {...register(id)}
         />
     )
 }
