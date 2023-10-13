@@ -51,6 +51,9 @@ export const Navbar = () => {
                             <li className="text-white">
                                 <Link href="#services">Services</Link>
                             </li>
+                            <li className="text-white">
+                                <Link href="#contacts">Contacts</Link>
+                            </li>
                         </ul>
                     </div>
                 </div>

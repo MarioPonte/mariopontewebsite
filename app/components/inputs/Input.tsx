@@ -18,12 +18,13 @@ const Input: React.FC<InputProps> = ({
             id={id}
             placeholder={placeholder}
             required
+            autoComplete="off"
             className="
                 peer
                 w-full
                 my-2
                 p-4
-                bg-indigo-950
+                bg-transparent
                 border-2
                 rounded-xl
                 outline-none

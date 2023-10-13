@@ -5,6 +5,7 @@ import Input from "./inputs/Input";
 import Textarea from "./inputs/Textarea";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import axios from "axios";
 
 const contactFormSchema = z.object({
     name: z.string().min(3).max(100),
@@ -16,12 +17,17 @@ export default function ContactForm() {
 
     type ContactFormData = z.infer<typeof contactFormSchema>
 
-    const { handleSubmit, register } = useForm<ContactFormData>({
+    const { handleSubmit, register, reset, formState: { isSubmitting } } = useForm<ContactFormData>({
         resolver: zodResolver(contactFormSchema)
     });
 
     const onSubmit = async (data: ContactFormData) => {
-        console.log(data);
+        try{
+            await axios.post("/api/contact", data);
+            reset();
+        }catch{
+            alert("Erro");
+        }
     }
 
     return (
@@ -29,7 +35,7 @@ export default function ContactForm() {
             <Input id="name" placeholder="Name" register={register} />
             <Input id="email" placeholder="Email" register={register} />
             <Textarea id="message" placeholder="Message" register={register} />
-            <button className="w-full my-2 p-4 bg-indigo-800 border-2 border-indigo-900 rounded-xl text-xl font-semibold">
+            <button className="w-full my-2 p-4 bg-indigo-800 border-2 border-indigo-900 rounded-xl text-xl font-semibold" disabled={isSubmitting}>
                 Send
             </button>
         </form>
