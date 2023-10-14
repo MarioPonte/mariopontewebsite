@@ -6,6 +6,7 @@ import Textarea from "./inputs/Textarea";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const contactFormSchema = z.object({
     name: z.string().min(3).max(100),
@@ -24,9 +25,10 @@ export default function ContactForm() {
     const onSubmit = async (data: ContactFormData) => {
         try{
             await axios.post("/api/contact", data);
+            toast.success("Message sent successfully!");
             reset();
         }catch{
-            alert("Erro");
+            toast.error("An error occurred while trying to send the message. Please try again.");
         }
     }
 
