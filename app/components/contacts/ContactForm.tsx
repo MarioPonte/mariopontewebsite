@@ -1,8 +1,8 @@
 'use client';
 
 import { useForm } from "react-hook-form";
-import Input from "./inputs/Input";
-import Textarea from "./inputs/Textarea";
+import Input from "../inputs/Input";
+import Textarea from "../inputs/Textarea";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
@@ -34,10 +34,10 @@ export default function ContactForm() {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <Input id="name" placeholder="Name" register={register} />
-            <Input id="email" placeholder="Email" register={register} />
+            <Input id="name" type="text" placeholder="Name" register={register} />
+            <Input id="email" type="email" placeholder="Email" register={register} />
             <Textarea id="message" placeholder="Message" register={register} />
-            <button className="w-full my-2 p-4 bg-indigo-800 border-2 border-indigo-900 rounded-xl text-xl font-semibold" disabled={isSubmitting}>
+            <button className="w-full my-2 p-4 bg-indigo-800 border-2 border-indigo-900 rounded-xl text-xl font-semibold disabled:opacity-70" disabled={isSubmitting}>
                 Send
             </button>
         </form>

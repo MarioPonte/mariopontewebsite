@@ -1,10 +1,10 @@
 'use client';
 
-import Container from "./Container";
+import Container from "../Container";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
-import { LogoMario } from "../SVGFiles";
+import { LogoMario } from "../../SVGFiles";
 import ContactForm from "./ContactForm";
 
 export default function Contacts() {

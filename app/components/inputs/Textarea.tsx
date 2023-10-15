@@ -23,6 +23,8 @@ const Textarea: React.FC<TextareaProps> = ({
                 p-4
                 bg-indigo-950
                 border-2
+                border-neutral-200
+                focus:border-white
                 rounded-xl
                 outline-none
                 transition

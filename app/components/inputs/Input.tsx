@@ -2,20 +2,22 @@
 
 interface InputProps {
     id: string;
+    type: string;
     placeholder: string;
     register: any;
 }
 
 const Input: React.FC<InputProps> = ({
     id,
+    type,
     placeholder,
     register
 }) => {
 
     return (
         <input
-            type="text"
             id={id}
+            type={type}
             placeholder={placeholder}
             required
             autoComplete="off"
@@ -26,6 +28,8 @@ const Input: React.FC<InputProps> = ({
                 p-4
                 bg-transparent
                 border-2
+                border-neutral-200
+                focus:border-white
                 rounded-xl
                 outline-none
                 transition
