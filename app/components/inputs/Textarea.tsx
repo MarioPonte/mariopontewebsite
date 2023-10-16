@@ -21,7 +21,7 @@ const Textarea: React.FC<TextareaProps> = ({
                 resize-none
                 my-2
                 p-4
-                bg-indigo-950
+                bg-transparent
                 border-2
                 border-neutral-200
                 focus:border-white

@@ -10,10 +10,6 @@ export default function Welcome() {
             <Container>
                 <motion.div 
                     className="py-20 flex flex-wrap justify-center items-center md:gap-10"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5 }}
                 >
                     <div>
                         <div className='sm:text-4xl md:text-8xl text-4xl font-bold'>
@@ -24,7 +20,7 @@ export default function Welcome() {
                         </div>
                     </div>
                     <div>
-                        <LogoMario className="sm:h-60 md:h-96 h-60 fill-white" />
+                        <LogoMario className="sm:h-60 md:h-96 h-60 fill-indigo-950 dark:fill-white" />
                     </div>
                 </motion.div>
             </Container>

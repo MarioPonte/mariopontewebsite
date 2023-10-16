@@ -15,7 +15,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
 }) => {
 
     return (
-        <div className="bg-slate-950 p-8 rounded-xl w-full border-[1px] border-slate-950 hover:border-white transition duration-500">
+        <div className="bg-indigo-100 dark:bg-slate-950 p-8 rounded-xl w-full border-[1px] border-indigo-100 dark:border-slate-950 hover:border-indigo-950 dark:hover:border-white transition duration-500">
             <div className="text-6xl">
                 <Icon />
             </div>

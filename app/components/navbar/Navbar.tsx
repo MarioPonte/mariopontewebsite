@@ -5,6 +5,7 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Link from "next/link";
 import Container from "../Container";
 import { useState } from "react";
+import ThemeButton from "../ThemeButton";
 
 export const Navbar = () => {
     const [navbar, setNavbar] = useState(false);
@@ -53,6 +54,9 @@ export const Navbar = () => {
                             </li>
                             <li className="text-white">
                                 <Link href="#contacts">Contacts</Link>
+                            </li>
+                            <li className="text-white">
+                                <ThemeButton/>
                             </li>
                         </ul>
                     </div>
