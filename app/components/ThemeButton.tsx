@@ -15,8 +15,8 @@ const ThemeButton = () => {
     }
 
     return (
-        <button onClick={() => setTheme(resolvedTheme === 'dark' ? "light" : "dark")}>
-            {resolvedTheme === 'dark' ? (<BsSunFill/>) : (<BsMoonFill/>)}
+        <button aria-label="Choose page theme" onClick={() => setTheme(resolvedTheme === 'dark' ? "light" : "dark")}>
+            {resolvedTheme === 'dark' ? (<BsSunFill size={18}/>) : (<BsMoonFill size={18}/>)}
         </button>
     )
 }
