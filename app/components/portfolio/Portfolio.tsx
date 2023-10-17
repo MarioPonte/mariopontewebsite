@@ -27,7 +27,7 @@ export default function Portfolio() {
                         <ProjectsCard title="União Cósmica Website" image="https://encurtador.com.br/hCJO1" />
                     </div>
                     <div className="mt-8 flex items-center justify-center text-center">
-                        <Link aria-label="Github Repositories" href="https://github.com/MarioPonte?tab=repositories" target="_blank">
+                        <Link aria-label="See all the projects" href="https://github.com/MarioPonte?tab=repositories" target="_blank">
                             <div className="flex items-center text-indigo-950 dark:text-neutral-200 hover:text-indigo-800 dark:hover:text-white">
                                 <BsGithub className="text-2xl mr-2" />
                                 <span>See all the projects</span>
