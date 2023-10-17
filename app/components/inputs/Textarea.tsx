@@ -23,12 +23,15 @@ const Textarea: React.FC<TextareaProps> = ({
                 p-4
                 bg-transparent
                 border-2
-                border-neutral-200
-                focus:border-white
+                border-indigo-950
+                dark:border-neutral-200
+                focus:border-indigo-800
+                dark:focus:border-white
                 rounded-xl
                 outline-none
                 transition
-                placeholder-neutral-200
+                placeholder-indigo-950
+                dark:placeholder-neutral-200
             "
             {...register(id)}
         />

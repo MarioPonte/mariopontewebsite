@@ -26,20 +26,20 @@ export default function Contacts() {
                         <ContactForm/>
                     </div>
 
-                    <div className="bg-slate-950 p-10 rounded-xl text-xs sm:text-xs md:text-lg text-neutral-400 h-fit flex flex-wrap gap-8">
+                    <div className="bg-indigo-200 dark:bg-slate-950 p-10 rounded-xl text-xs sm:text-xs md:text-lg text-indigo-950 dark:text-neutral-400 h-fit flex flex-wrap gap-8">
                         <div className="space-y-6 w-fit">
-                            <a href="tel:964158481" className="flex items-center hover:text-white cursor-pointer duration-300">
+                            <a href="tel:964158481" aria-label="Phone Number" className="flex items-center hover:text-indigo-800 dark:hover:text-white cursor-pointer duration-300">
                                 <FaPhoneAlt className="mr-2" />(+351) 964 158 481
                             </a>
-                            <a href="mailto:ponteolavo30@gmail.com" className="flex items-center hover:text-white cursor-pointer duration-300">
+                            <a href="mailto:ponteolavo30@gmail.com" aria-label="Email" className="flex items-center hover:text-indigo-800 dark:hover:text-white cursor-pointer duration-300">
                                 <MdEmail className="mr-2" />ponteolavo30@gmail.com
                             </a>
-                            <a href="https://maps.app.goo.gl/voYK9h47sJzF6ckaA" target="_Blank" className="flex items-center hover:text-white cursor-pointer duration-300">
+                            <a href="https://maps.app.goo.gl/voYK9h47sJzF6ckaA" aria-label="Location" target="_Blank" className="flex items-center hover:text-indigo-800 dark:hover:text-white cursor-pointer duration-300">
                                 <IoLocationSharp className="mr-2" />Vale Judeu, Loulé
                             </a>
                         </div>
                         <div>
-                            <LogoMario className="h-20 sm:h-20 md:h-32 fill-white"/>
+                            <LogoMario className="h-20 sm:h-20 md:h-32 fill-indigo-950 dark:fill-white"/>
                         </div>
                     </div>
 

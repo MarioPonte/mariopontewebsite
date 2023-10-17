@@ -26,7 +26,7 @@ export default function About() {
                             </p>
                         </div>
 
-                        <a href="CV-MP.pdf" target="_blank" className="inline-flex items-center sm:text-xs md:text-sm text-xs text-white bg-indigo-800 font-semibold sm:py-1 md:py-2 py-1 sm:px-2 md:px-4 px-2 sm:rounded-lg md:rounded-xl rounded-lg">
+                        <a href="CV-MP.pdf" target="_blank" aria-label="Download CV" className="inline-flex items-center sm:text-xs md:text-sm text-xs text-white bg-indigo-800 font-semibold sm:py-1 md:py-2 py-1 sm:px-2 md:px-4 px-2 sm:rounded-lg md:rounded-xl rounded-lg">
                             <FiFileText className="mr-2" /> Download CV
                         </a>
                     </div>

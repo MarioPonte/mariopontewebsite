@@ -37,7 +37,7 @@ export default function ContactForm() {
             <Input id="name" type="text" placeholder="Name" register={register} />
             <Input id="email" type="email" placeholder="Email" register={register} />
             <Textarea id="message" placeholder="Message" register={register} />
-            <button className="w-full my-2 p-4 bg-indigo-800 border-2 border-indigo-900 text-white rounded-xl text-xl font-semibold disabled:opacity-70" disabled={isSubmitting}>
+            <button className="w-full my-2 p-4 bg-indigo-800 border-2 border-indigo-900 text-white rounded-xl text-xl font-semibold disabled:opacity-70 shadow shadow-indigo-800" disabled={isSubmitting}>
                 Send
             </button>
         </form>
