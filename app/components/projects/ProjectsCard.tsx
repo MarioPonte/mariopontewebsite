@@ -16,7 +16,7 @@ const ProjectsCard: React.FC<ProjectsCardProps> = ({
     return (
             <div className="relative overflow-hidden rounded-xl bg-cover bg-no-repeat bg-[50%]">
                 <Image alt="Project Image" width={1000} height={750} src={image} className="w-full align-middle transition duration-300 ease-linear" />
-                <Link aria-label={title} href="/portfolio">
+                <Link aria-label={title} href="/projects">
                     <div
                         className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed">
                         <div className="flex h-full items-end justify-start">

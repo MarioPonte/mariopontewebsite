@@ -1,6 +1,6 @@
 import About from "./components/About";
 import Contacts from "./components/contacts/Contacts";
-import Portfolio from "./components/portfolio/Portfolio";
+import Projects from "./components/projects/Projects";
 import Services from "./components/Services";
 import Technologies from "./components/technologies/Technologies";
 import Welcome from "./components/Welcome";
@@ -11,7 +11,7 @@ export default function Home() {
       <Welcome/>
       <About/>
       <Technologies/>
-      <Portfolio/>
+      <Projects/>
       <Services/>
       <Contacts/>
     </>

@@ -3,7 +3,6 @@
 import { LogoMario } from "@/app/SVGFiles";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Link from "next/link";
-import Container from "../Container";
 import { useState } from "react";
 import ThemeButton from "../ThemeButton";
 
@@ -41,19 +40,19 @@ export const Navbar = () => {
                                 <Link href="/">Home</Link>
                             </li>
                             <li className="text-white">
-                                <Link href="#about">About</Link>
+                                <Link href="/#about">About</Link>
                             </li>
                             <li className="text-white">
-                                <Link href="#technologies">Technologies</Link>
+                                <Link href="/#technologies">Technologies</Link>
                             </li>
                             <li className="text-white">
-                                <Link href="#portfolio">Portfolio</Link>
+                                <Link href="/#projects">Projects</Link>
                             </li>
                             <li className="text-white">
-                                <Link href="#services">Services</Link>
+                                <Link href="/#services">Services</Link>
                             </li>
                             <li className="text-white">
-                                <Link href="#contacts">Contacts</Link>
+                                <Link href="/#contacts">Contacts</Link>
                             </li>
                             <li className="text-white">
                                 <ThemeButton/>

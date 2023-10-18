@@ -2,7 +2,7 @@
 
 import { ThemeProvider } from "next-themes";
 import ToasterProvider from "./ToasterProvider";
-import { BackToTop } from "../components/BackToTopBtn";
+import { BackToTop } from "./BackToTopBtn";
 
 const Providers = ({children}: any) => {
     return (

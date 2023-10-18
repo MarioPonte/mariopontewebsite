@@ -5,7 +5,6 @@ import ServicesCard from "./ServicesCard";
 import { PiDatabaseThin, PiShoppingCartThin, PiPaintBrushThin, PiLaptopThin } from 'react-icons/pi';
 
 export default function Services() {
-
     return (
         <section id="services" className="pt-20 h-auto">
             <Container>
@@ -23,7 +22,6 @@ export default function Services() {
                     <ServicesCard title="E-Commerce" description="I can create an online store for your business with all the tools you need." icon={PiShoppingCartThin} />
                     <ServicesCard title="Design" description="It's not my main focus, but I do have experience in creating graphic arts. I can create logos, banners, flyers, etc." icon={PiPaintBrushThin} />
                 </div>
-
             </Container>
         </section>
     )

@@ -2,11 +2,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Navbar } from './components/navbar/Navbar'
 import { Footer } from './components/footer/Footer'
-import ToasterProvider from './providers/ToasterProvider'
 import Providers from './providers/Providers'
-import { BackToTop } from './components/BackToTopBtn'
 import ClientOnly from './components/ClientOnly'
-import { ThemeProvider } from 'next-themes'
 
 export const metadata: Metadata = {
   title: 'Mário Ponte',
@@ -19,16 +16,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='!scroll-smooth light' style={{colorScheme: 'light'}}>
+    <html lang="en" className='light' style={{colorScheme: 'light'}}>
       <body className="bg-indigo-50 text-indigo-950 dark:bg-indigo-950 dark:text-white">
         <Providers>
-        <ClientOnly>
-          <Navbar/>
-          <div className='pb-20 pt-28'>
-            {children}
-          </div>
-          <Footer/>
-        </ClientOnly>
+          <ClientOnly>
+            <Navbar/>
+            <div className='pb-20 pt-28'>
+              {children}
+            </div>
+            <Footer/>
+          </ClientOnly>
         </Providers>
       </body>
     </html>

@@ -5,19 +5,18 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useCallback, useEffect, useState } from 'react'
 
 export const BackToTop = () => {
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
   const handleScroll = useCallback(() => {
-    if (!show && window.scrollY > 500) setShow(true)
-    if (show && window.scrollY <= 500) setShow(false)
+    if (!show && window.scrollY > 400) setShow(true)
+    if (show && window.scrollY <= 400) setShow(false)
   }, [show])
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll])
 
   return (

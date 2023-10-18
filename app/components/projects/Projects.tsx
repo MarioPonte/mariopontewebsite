@@ -5,14 +5,14 @@ import Container from "../Container";
 import ProjectsCard from "./ProjectsCard";
 import { BsGithub } from 'react-icons/bs';
 
-export default function Portfolio() {
+export default function Projects() {
 
     return (
-        <section id="portfolio" className="pt-20 h-auto">
+        <section id="projects" className="pt-20 h-auto">
             <Container>
                 <div className="my-20 gap-10 md:gap-32">
                     <div className='text-4xl font-bold'>
-                        Portfolio
+                        Projects
                     </div>
                     <p className="text-lg mt-8">
                         Here&apos;s some of the work I&apos;ve done recently. Each project presented is a sample of the kind of solutions I&apos;m capable of creating.
@@ -34,7 +34,6 @@ export default function Portfolio() {
                             </div>
                         </Link>
                     </div>
-
                 </div>
 
             </Container>
