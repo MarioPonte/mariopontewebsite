@@ -1,17 +1,24 @@
 'use client';
 
-export default function SectionInfo() {
+interface SectionInfoProps {
+    title: string;
+    description: string;
+}
+
+const SectionInfo: React.FC<SectionInfoProps> = ({
+    title,
+    description
+}) => {
     return (
         <div className="my-20 gap-10 md:gap-32">
             <div className='text-4xl font-bold'>
-                Technologies
+                {title}
             </div>
             <p className="text-lg mt-8">
-                Here are the technologies I use to develop web solutions. This includes programming languages, frameworks,
-                libraries, platforms and other tools that allow me to create efficient and innovative projects.
-                Knowing the technologies I use can help you understand my skills as a web developer and how they
-                can be applied to meet your needs.
+                {description}
             </p>
         </div>
     )
 }
+
+export default SectionInfo;

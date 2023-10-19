@@ -8,7 +8,7 @@ export const Footer = () => {
     const year = new Date();
     return (
         <div className="sticky top-[100vh] text-center bg-indigo-200 dark:bg-slate-950 py-4">
-            <div className="">
+            <div>
                 <Container>
                     <div className="pt-6">
                         <div>

@@ -8,6 +8,7 @@ import { FaPhp, FaBootstrap } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 import TechnologiesIcons from "./TechnologiesIcons";
 import { useState } from "react";
+import SectionInfo from "../SectionInfo";
 
 export default function Technologies() {
 
@@ -30,17 +31,13 @@ export default function Technologies() {
     return (
         <section id="technologies" className="pt-20 h-auto">
             <Container>
-                <div className="my-20 gap-10 md:gap-32">
-                    <div className='text-4xl font-bold'>
-                        Technologies
-                    </div>
-                    <p className="text-lg mt-8">
-                        Here are the technologies I use to develop web solutions. This includes programming languages, frameworks, 
-                        libraries, platforms and other tools that allow me to create efficient and innovative projects. 
-                        Knowing the technologies I use can help you understand my skills as a web developer and how they 
-                        can be applied to meet your needs.
-                    </p>
-                </div>
+                <SectionInfo 
+                    title="Technologies" 
+                    description="Here are the technologies I use to develop web solutions. This includes programming languages, frameworks,
+                    libraries, platforms and other tools that allow me to create efficient and innovative projects.
+                    Knowing the technologies I use can help you understand my skills as a web developer and how they
+                    can be applied to meet your needs."
+                />
                 <div className="my-20 flex flex-wrap-reverse justify-center items-center gap-10 md:gap-32">
                     <div id="TechContent" className="w-[500px]">
                         {techInfo || "Hover your mouse over each of the technologies to see more information about them."}
