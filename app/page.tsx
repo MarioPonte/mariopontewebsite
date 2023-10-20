@@ -4,12 +4,31 @@ import Projects from "./components/projects/Projects";
 import Services from "./components/Services";
 import Technologies from "./components/technologies/Technologies";
 import Welcome from "./components/Welcome";
+import { HomePageData } from "./types/page-info";
+import { fetchHygraphQuery } from "./utils/fetch-hygraph-query";
 
-export default function Home() {
+const getPageData = async (): Promise<HomePageData> => {
+  const query = `
+    query PageInfoQuery {
+      page(where: {slug: "home"}) {
+        about {
+          raw
+        } 
+      }
+    }
+  `
+
+  return fetchHygraphQuery(query, 60 * 60 * 24);
+}
+
+export default async function Home() {
+
+  const { page: pageData } = await getPageData();
+
   return (
     <>
       <Welcome/>
-      <About/>
+      <About homeInfo={pageData} />
       <Technologies/>
       <Projects/>
       <Services/>

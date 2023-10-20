@@ -1,8 +1,14 @@
 import Container from "./Container";
 import Image from "next/image";
 import { FiFileText } from "react-icons/fi";
+import { HomePageInfo } from "../types/page-info";
+import { RichText } from "./rich-text";
 
-export default function About() {
+type HomeSectionProps = {
+    homeInfo: HomePageInfo
+}
+
+export default function About({ homeInfo }: HomeSectionProps){
     return (
         <section id="about" className="pt-20 h-auto flex justify-center items-center">
             <Container>
@@ -15,15 +21,7 @@ export default function About() {
                             About me
                         </div>
                         <div className='sm:w-auto md:w-96 w-auto sm:text-base md:text-lg text-base mt-8 mb-6'>
-                            <p>
-                                My name is Mário Ponte, I have more than 3 years of programming experience and along the way I have
-                                programmed in <strong>C</strong>, <strong>JAVA</strong>, <strong>PHP</strong>, <strong>JavaScript</strong> and <strong>Python</strong>, but
-                                at the moment I am only focused on <strong>Web Development</strong>.
-                            </p>
-                            <p>
-                                I&apos;m passionate about everything that involves computer engineering and I&apos;m always interested in
-                                learning new technologies.
-                            </p>
+                            <RichText content={homeInfo.about.raw} />
                         </div>
                         <a href="CV-MP.pdf" target="_blank" aria-label="Download CV" className="inline-flex items-center sm:text-xs md:text-sm text-xs text-white bg-gradient-to-r from-indigo-600 to-indigo-800 font-semibold sm:py-1 md:py-2 py-1 sm:px-2 md:px-4 px-2 sm:rounded-lg md:rounded-xl rounded-lg">
                             <FiFileText className="mr-2" /> Download CV
