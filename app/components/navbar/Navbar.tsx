@@ -11,24 +11,20 @@ export const Navbar = () => {
     return (
         <div className="fixed w-full bg-indigo-950 z-10 shadow-sm">
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
-                <div>
-                    <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                        <div>
-                            <Link aria-label="Page Logo" href="/"><LogoMario className="h-14 fill-white" /></Link>
-                        </div>
-                        <div className="md:hidden">
-                            <button
-                                className="p-2 text-gray-700"
-                                aria-label="menu"
-                                onClick={() => setNavbar(!navbar)}
-                            >
-                                {navbar ? (
-                                    <AiOutlineClose className="text-white" />
-                                ) : (
-                                    <AiOutlineMenu className="text-white" />
-                                )}
-                            </button>
-                        </div>
+                <div className="flex items-center justify-between py-3 md:py-5 md:block">
+                    <Link aria-label="Page Logo" href="/"><LogoMario className="h-14 fill-white" /></Link>
+                    <div className="md:hidden">
+                        <button
+                            className="p-2 text-gray-700"
+                            aria-label="menu"
+                            onClick={() => setNavbar(!navbar)}
+                        >
+                            {navbar ? (
+                                <AiOutlineClose className="text-white" />
+                            ) : (
+                                <AiOutlineMenu className="text-white" />
+                            )}
+                        </button>
                     </div>
                 </div>
                 <div>
@@ -55,7 +51,7 @@ export const Navbar = () => {
                                 <Link href="/#contacts">Contacts</Link>
                             </li>
                             <li className="text-white">
-                                <ThemeButton/>
+                                <ThemeButton />
                             </li>
                         </ul>
                     </div>

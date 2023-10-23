@@ -5,23 +5,30 @@ import Container from "../Container";
 import ProjectsCard from "./ProjectsCard";
 import { BsGithub } from 'react-icons/bs';
 import SectionInfo from "../SectionInfo";
+import { Project } from "@/app/types/projects";
 
-export default function Projects() {
+type ProjectsProps = {
+    projects: Project[]
+}
+
+export const Projects = ({ projects }: ProjectsProps) => {
 
     return (
         <section id="projects" className="pt-20 h-auto">
             <Container>
-                <SectionInfo 
-                    title="Projects" 
+                <SectionInfo
+                    title="Projects"
                     description="Here&apos;s some of the work I&apos;ve done recently. Each project presented is a sample of the kind of solutions I&apos;m capable of creating.
                     As well as presenting the projects, I also describe the solutions proposed and the challenges I faced. I hope you find
                     inspiration in my work and see how my skills and knowledge can be useful for your own projects."
                 />
                 <div>
                     <div className="grid gap-8 lg:grid-cols-3">
-                        <ProjectsCard title="Avatar Landing Page" image="https://encurtador.com.br/boALR" />
-                        <ProjectsCard title="SpaceBox" image="https://encurtador.com.br/auwAZ" />
-                        <ProjectsCard title="União Cósmica Website" image="https://encurtador.com.br/hCJO1" />
+                        {projects?.map((project) => (
+                            <div key={project.slug}>
+                                <ProjectsCard title={project.title} image={project.thumbnail.url} />
+                            </div>
+                        ))}
                     </div>
                     <div className="mt-8 flex items-center justify-center text-center">
                         <Link aria-label="See all the projects" href="https://github.com/MarioPonte?tab=repositories" target="_blank">
@@ -32,7 +39,6 @@ export default function Projects() {
                         </Link>
                     </div>
                 </div>
-
             </Container>
         </section>
     )

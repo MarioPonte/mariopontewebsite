@@ -11,9 +11,7 @@ export const Footer = () => {
             <div>
                 <Container>
                     <div className="pt-6">
-                        <div>
-                            <LogoMario className='h-[88px] fill-indigo-950 dark:fill-white m-auto' />
-                        </div>
+                        <LogoMario className='h-[88px] fill-indigo-950 dark:fill-white m-auto' />
                         <div className='flex justify-center gap-x-4 text-xl mt-6'>
                             <Link aria-label="Facebook" href="https://www.facebook.com/mario.ponte.79/" target='_Blank' className='text-indigo-950 dark:text-neutral-200 hover:text-indigo-800 dark:hover:text-white'><BsFacebook/></Link>
                             <Link aria-label="Linkedin" href="https://www.linkedin.com/in/m%C3%A1rio-ponte/" target='_Blank' className='text-indigo-950 dark:text-neutral-200 hover:text-indigo-800 dark:hover:text-white'><BsLinkedin/></Link>
