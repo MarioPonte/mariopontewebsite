@@ -1,38 +1,53 @@
-"use client";
-
-import Link from "next/link";
 import ProjectsCard from "../components/projects/ProjectsCard";
 import { TbArrowNarrowLeft } from "react-icons/tb";
+import SectionInfo from "../components/SectionInfo";
+import LinkBtn from "../components/inputs/LinkBtn";
+import { fetchHygraphQuery } from "../utils/fetch-hygraph-query";
+import { ProjectsPageData } from "../types/page-info";
 
-export default function Project() {
+const getPageData = async (): Promise<ProjectsPageData> => {
+    const query = `
+      query ProjectsQuery {
+        projects {
+          description
+          slug
+          title
+          thumbnail {
+            url
+          }
+          technologies {
+            name
+          }
+        }
+      }
+      `
+  
+    return fetchHygraphQuery(
+      query,
+      1000 * 60 * 60 * 24, // 1 day
+    )
+}
+
+export default async function Projects() {
+    const { projects } = await getPageData();
 
     return (
         <section>
             <div className="mt-20 sm:mx-10 md:mx-20 mx-10">
-                <div className="my-20 gap-10 md:gap-32">
-                    <div className='text-4xl font-bold'>
-                        Projects
-                    </div>
-                    <p className="text-lg mt-8">
-                        Here&apos;s some of the work I&apos;ve done recently. Each project presented is a sample of the kind of solutions I&apos;m capable of creating.
+                <SectionInfo 
+                    title="Projects" 
+                    description="Here&apos;s some of the work I&apos;ve done recently. Each project presented is a sample of the kind of solutions I&apos;m capable of creating.
                         As well as presenting the projects, I also describe the solutions proposed and the challenges I faced. I hope you find
-                        inspiration in my work and see how my skills and knowledge can be useful for your own projects.
-                    </p>
-                </div>
-
+                        inspiration in my work and see how my skills and knowledge can be useful for your own projects." 
+                />
                 <div>
                     <div className="mb-8 flex items-center justify-center text-center">
-                        <Link aria-label="See all the projects" href="/">
-                            <div className="flex items-center text-indigo-950 dark:text-neutral-200 hover:text-indigo-800 dark:hover:text-white">
-                                <TbArrowNarrowLeft className="text-2xl mr-2" />
-                                <span>Back to Home</span>
-                            </div>
-                        </Link>
+                        <LinkBtn name="Back to Home" href="/" icon={TbArrowNarrowLeft} />
                     </div>
                     <div className="grid gap-8 lg:grid-cols-3">
-                        <ProjectsCard title="Avatar Landing Page" image="https://encurtador.com.br/boALR" />
-                        <ProjectsCard title="SpaceBox" image="https://encurtador.com.br/auwAZ" />
-                        <ProjectsCard title="União Cósmica Website" image="https://encurtador.com.br/hCJO1" />
+                        {projects.map(project => (
+                            <ProjectsCard key={project.title} title={project.title} image={project.thumbnail.url} href={`/projects/${project.slug}`} />
+                        ))}
                     </div>
                 </div>
             </div>
