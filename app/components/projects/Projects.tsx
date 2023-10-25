@@ -25,9 +25,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
                 <div>
                     <div className="grid gap-8 lg:grid-cols-3">
                         {projects?.map((project) => (
-                            <div key={project.slug}>
-                                <ProjectsCard title={project.title} image={project.thumbnail.url} href={`/projects/${project.slug}`} />
-                            </div>
+                            <ProjectsCard key={project.title} title={project.title} image={project.thumbnail.url} href={`/projects/${project.slug}`} />
                         ))}
                     </div>
                     <div className="mt-8 flex items-center justify-center text-center">
