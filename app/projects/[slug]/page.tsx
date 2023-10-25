@@ -1,7 +1,7 @@
 import Container from "@/app/components/Container";
 import LinkBtn from "@/app/components/inputs/LinkBtn";
 import TechnologieBadge from "@/app/components/technologies/TechnologieBadge";
-import { ProjectPageData } from "@/app/types/page-info";
+import { ProjectPageData, ProjectsPageStaticData } from "@/app/types/page-info";
 import { fetchHygraphQuery } from "@/app/utils/fetch-hygraph-query";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -10,7 +10,7 @@ import { TbArrowNarrowLeft } from "react-icons/tb";
 
 type ProjectProps = {
     params: {
-      slug: string
+        slug: string
     }
 }
 
@@ -47,7 +47,7 @@ export default async function Project({ params: { slug } }: ProjectProps) {
         <Container>
             <div className="grid gap-10 sm:gap-10 md:gap-20 lg:grid-cols-2 items-center">
                 <div>
-                    <Image alt="Project Image" width={1000} height={750} src="https://encurtador.com.br/boALR" className="w-full rounded-2xl" />
+                    <Image alt="Project Image" width={1000} height={750} src={project.thumbnail.url} className="w-full rounded-2xl" />
                 </div>
                 <div>
                     <div>
@@ -55,16 +55,21 @@ export default async function Project({ params: { slug } }: ProjectProps) {
                             {project.title}
                         </div>
                         <p className="text-lg mt-8">
-                            Simple landing page with the theme of the movie Avatar: The Way of Water to practice my HTML5 and CSS3 skills.
+                            {project.description}
                         </p>
                     </div>
                     <div className="flex space-x-2 mt-2">
-                        <TechnologieBadge name="HTML5" />
-                        <TechnologieBadge name="CSS3" />
+                        {project.technologies.map(tech => (
+                            <TechnologieBadge key={tech.name} name={tech.name} />
+                        ))}
                     </div>
                     <div className="mt-8 space-x-10 flex">
-                        <LinkBtn name="Repository" href="https://github.com/MarioPonte/AvatarTheWayOfWater" target="_blank" icon={BsGithub} />
-                        <LinkBtn name="View Project" href="https://marioponte.github.io/AvatarTheWayOfWater/" target="_blank" icon={BsGlobe} />
+                        {project?.githubUrl && (
+                            <LinkBtn name="Repository" href={project?.githubUrl} target="_blank" icon={BsGithub} />
+                        )}
+                        {project?.liveProjectUrl && (
+                            <LinkBtn name="View Project" href={project?.liveProjectUrl} target="_blank" icon={BsGlobe} />
+                        )}
                     </div>
                     <div className="mt-8 space-x-10 flex">
                         <LinkBtn name="Back to Home" href="/" icon={TbArrowNarrowLeft} />
@@ -73,4 +78,18 @@ export default async function Project({ params: { slug } }: ProjectProps) {
             </div>
         </Container>
     )
+}
+
+export async function generateStaticParams() {
+    const query = `
+    query ProjectsSlugsQuery() {
+        projects(first: 100) {
+            slug
+        }
+    }
+    `
+
+    const { projects } = await fetchHygraphQuery<ProjectsPageStaticData>(query);
+
+    return projects
 }

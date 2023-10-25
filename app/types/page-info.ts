@@ -1,6 +1,5 @@
 import type { RichTextContent } from "@graphcms/rich-text-types";
 import { KnownTech, Project } from "./projects";
-import { type } from "os";
 
 export type HomePageInfo = {
     about: {
@@ -17,6 +16,12 @@ export type ProjectPageData = {
 
 export type ProjectsPageData = {
     projects: Project[]
+}
+
+export type ProjectsPageStaticData = {
+    projects: {
+        slug: string
+    }[]
 }
 
 export type HomePageData = {

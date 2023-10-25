@@ -20,10 +20,7 @@ export type Project = {
   pageThumbnail: {
     url: string
   }
-  description: {
-    raw: RichTextContent
-    text: string
-  }
+  description: string
   liveProjectUrl?: string
   githubUrl?: string
 }
