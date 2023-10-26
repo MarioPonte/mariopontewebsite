@@ -10,9 +10,7 @@ const ThemeButton = () => {
     const [mounted, setMounted] = useState(false);
     useEffect(() => setMounted(true), []);
 
-    if(!mounted){
-        return null;
-    }
+    if(!mounted) return null;
 
     return (
         <button aria-label="Choose page theme" onClick={() => setTheme(resolvedTheme === 'dark' ? "light" : "dark")}>

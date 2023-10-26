@@ -13,9 +13,7 @@ export default function About({ homeInfo }: HomeSectionProps){
         <section id="about" className="pt-20 h-auto flex justify-center items-center">
             <Container>
                 <div className="my-20 flex flex-wrap-reverse justify-center items-center gap-10 md:gap-20">
-                    <div>
-                        <Image src="/images/about.jpg" alt="Picture of Mário Ponte" width={336} height={482} className="rounded-[20px] sm:w-auto md:w-80 w-auto" />
-                    </div>
+                    <Image src="/images/about.jpg" alt="Picture of Mário Ponte" width={336} height={482} className="rounded-[20px] sm:w-auto md:w-80 w-auto" />
                     <div>
                         <div className='sm:text-2xl md:text-4xl text-2xl font-bold'>
                             About me
