@@ -10,7 +10,7 @@ export default function Welcome() {
                 <div className="flex flex-wrap justify-center items-center md:gap-10">
                     <div>
                         <div className='sm:text-xl md:text-4xl text-xl font-bold'>
-                            Hello, I'm
+                            Hello, I&apos;m
                         </div>
                         <div className='sm:text-4xl md:text-8xl text-4xl text-transparent font-bold bg-clip-text bg-gradient-to-r from-indigo-500 to-indigo-700'>
                             Mário Ponte
