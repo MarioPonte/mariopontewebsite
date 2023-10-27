@@ -6,6 +6,8 @@ import { BsGithub } from 'react-icons/bs';
 import SectionInfo from "../SectionInfo";
 import { Project } from "@/app/types/projects";
 import LinkBtn from "../inputs/LinkBtn";
+import { fadeUpAnimation } from "@/app/lib/animations";
+import { motion } from "framer-motion";
 
 type ProjectsProps = {
     projects: Project[]
@@ -22,8 +24,18 @@ export const Projects = ({ projects }: ProjectsProps) => {
                     inspiration in my work and see how my skills and knowledge can be useful for your own projects."
                 />
                 <div className="grid gap-8 lg:grid-cols-3">
-                    {projects?.map((project) => (
-                        <ProjectsCard key={project.title} title={project.title} image={project.thumbnail.url} href={`/projects/${project.slug}`} />
+                    {projects?.map((project, i) => (
+                        <motion.div
+                            key={project.title}
+                            {...fadeUpAnimation}
+                            transition={{ duration: 0.5, delay: i * 0.1 }}
+                        >
+                            <ProjectsCard
+                                title={project.title}
+                                image={project.thumbnail.url}
+                                href={`/projects/${project.slug}`}
+                            />
+                        </motion.div>
                     ))}
                 </div>
                 <div className="mt-8 flex items-center justify-center text-center">

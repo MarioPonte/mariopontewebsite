@@ -7,6 +7,7 @@ import TechnologieBadge from '../technologies/TechnologieBadge'
 import LinkBtn from '../inputs/LinkBtn'
 import { BsGithub, BsGlobe } from "react-icons/bs";
 import { TbArrowNarrowLeft } from "react-icons/tb";
+import { techBadgeAnimation } from '@/app/lib/animations'
 
 type ProjectDetailsProps = {
     project: Project
@@ -25,8 +26,13 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
                         {project.description}
                     </p>
                     <div className="flex space-x-2 mt-2">
-                        {project.technologies.map(tech => (
-                            <TechnologieBadge key={tech.name} name={tech.name} />
+                        {project.technologies.map((tech, i) => (
+                            <TechnologieBadge 
+                                key={tech.name} 
+                                name={tech.name} 
+                                {...techBadgeAnimation}
+                                transition={{ duration: 0.3, delay: i * 0.1 }}
+                            />
                         ))}
                     </div>
                     <div className="mt-8 space-x-10 flex">
