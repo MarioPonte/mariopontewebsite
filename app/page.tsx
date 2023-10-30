@@ -6,32 +6,12 @@ import Technologies from "./components/technologies/Technologies";
 import Welcome from "./components/Welcome";
 import { HomePageData } from "./types/page-info";
 import { fetchHygraphQuery } from "./utils/fetch-hygraph-query";
+import { pageQuery } from "./utils/hygraph-queries";
 
 const getPageData = async (): Promise<HomePageData> => {
-  const query = `
-    query PageInfoQuery {
-      page(where: {slug: "home"}) {
-        about {
-          raw
-        }
-        highlightProjects {
-          slug
-          thumbnail {
-            url
-          }
-          title
-          description
-          technologies {
-            name
-          }
-        } 
-      }
-    }
-  `
-
   return fetchHygraphQuery(
-    query, 
-    1000 * 60 * 60 * 24, // 1 day
+    pageQuery, 
+    1000 * 60 * 60 * 24,
   );
 }
 

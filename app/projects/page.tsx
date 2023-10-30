@@ -4,31 +4,16 @@ import SectionInfo from "../components/SectionInfo";
 import LinkBtn from "../components/inputs/LinkBtn";
 import { fetchHygraphQuery } from "../utils/fetch-hygraph-query";
 import { ProjectsPageData } from "../types/page-info";
+import { projectsQuery } from "../utils/hygraph-queries";
 
 export const metadata = {
   title: "Projects"
 }
 
 const getPageData = async (): Promise<ProjectsPageData> => {
-  const query = `
-      query ProjectsQuery {
-        projects {
-          description
-          slug
-          title
-          thumbnail {
-            url
-          }
-          technologies {
-            name
-          }
-        }
-      }
-      `
-
   return fetchHygraphQuery(
-    query,
-    1000 * 60 * 60 * 24, // 1 day
+    projectsQuery,
+    1000 * 60 * 60 * 24,
   )
 }
 

@@ -1,10 +1,10 @@
 "use client";
 
 import { LogoMario } from "@/app/SVGFiles";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Link from "next/link";
 import { useState } from "react";
 import { NavbarList } from "./NavbarList";
+import NavbarMenuBtn from "./NavbarMenuBtn";
 
 export const Navbar = () => {
     const [navbar, setNavbar] = useState(false);
@@ -14,17 +14,7 @@ export const Navbar = () => {
                 <div className="flex items-center justify-between py-3 md:py-5 md:block">
                     <Link aria-label="Page Logo" href="/"><LogoMario className="h-14 fill-white" /></Link>
                     <div className="md:hidden">
-                        <button
-                            className="p-2 text-gray-700"
-                            aria-label="menu"
-                            onClick={() => setNavbar(!navbar)}
-                        >
-                            {navbar ? (
-                                <AiOutlineClose className="text-white" />
-                            ) : (
-                                <AiOutlineMenu className="text-white" />
-                            )}
-                        </button>
+                        <NavbarMenuBtn isOpen={navbar} onClick={() => setNavbar(!navbar)} />
                     </div>
                 </div>
                 <div>

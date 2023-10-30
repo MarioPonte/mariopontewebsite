@@ -30,11 +30,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
                             {...fadeUpAnimation}
                             transition={{ duration: 0.5, delay: i * 0.1 }}
                         >
-                            <ProjectsCard
-                                title={project.title}
-                                image={project.thumbnail.url}
-                                href={`/projects/${project.slug}`}
-                            />
+                            <ProjectsCard title={project.title} image={project.thumbnail.url} href={`/projects/${project.slug}`} />
                         </motion.div>
                     ))}
                 </div>
