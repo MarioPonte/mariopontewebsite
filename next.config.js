@@ -3,7 +3,8 @@ const nextConfig = {
     images: {
         domains: [
           'encurtador.com.br',
-          'media.graphassets.com'
+          'media.graphassets.com',
+          'github.com'
         ]
     }
 }

@@ -3,7 +3,7 @@ import Contacts from "./components/contacts/Contacts";
 import { Projects } from "./components/projects/Projects";
 import Services from "./components/Services";
 import Technologies from "./components/technologies/Technologies";
-import Welcome from "./components/Welcome";
+import Hero from "./components/hero/Hero";
 import { HomePageData } from "./types/page-info";
 import { fetchHygraphQuery } from "./utils/fetch-hygraph-query";
 import { pageQuery } from "./utils/hygraph-queries";
@@ -21,7 +21,7 @@ export default async function Home() {
 
   return (
     <>
-      <Welcome/>
+      <Hero/>
       <About homeInfo={pageData} />
       <Technologies/>
       <Projects projects={pageData.highlightProjects} />
