@@ -1,41 +1,22 @@
 "use client";
 
-import { LogoMario } from "@/app/SVGFiles";
 import Container from "../Container";
-import Image from "next/image";
+import { BsChevronCompactDown } from "react-icons/bs";
+import Link from "next/link";
+import HeroContacts from "./HeroContacts";
 
 export default function Hero() {
     return (
-        <section id="welcome" className="h-fit flex justify-center items-center">
+        <section id="hero" className="h-screen min-h-[400px]">
             <Container>
-                {/*
-                    <div className="flex flex-wrap justify-center items-center md:gap-10">
-                        <div>
-                            <div className='sm:text-xl md:text-4xl text-xl font-bold'>
-                                Hello, I&apos;m
-                            </div>
-                            <div className='sm:text-4xl md:text-8xl text-4xl text-transparent font-bold bg-clip-text bg-gradient-to-r from-indigo-500 to-indigo-700'>
-                                Mário Ponte
-                            </div>
-                            <div className='sm:text-xl md:text-4xl text-xl font-bold'>
-                                Web Developer
-                            </div>
-                            <button className="my-8 p-4 bg-gradient-to-r from-indigo-600 to-indigo-800 text-white shadow-2xl shadow-indigo-300 dark:shadow-indigo-900 rounded-xl text-xl font-semibold">
-                                Get in touch
-                            </button>
-                        </div>
-                        <div>
-                            <LogoMario className="sm:h-60 md:h-[500px] h-60 fill-indigo-950 dark:fill-white" />
-                        </div>
-                    </div>
-                */}
-                <div className="flex text-center justify-center items-center flex-col space-y-6">
-                    <Image src="https://github.com/MarioPonte.png" alt="Picture of Mário Ponte" width={100} height={100} className="rounded-full dark:border-white drop-shadow-[0_15px_15px_rgba(165,180,252,0.5)] dark:drop-shadow-[0_15px_15px_rgba(49,46,129,0.5)]" />
-                    <h1 className="text-4xl sm:text-8xl font-bold">Mário Ponte</h1>
-                    <h5 className="text-lg font-medium w-fit sm:w-[400px]">I create web solutions that make your ideas come to life. Let&apos;s build something amazing together.</h5>
-                    <button className="w-40 my-2 p-4 hover:bg-gradient-to-r border-[2px] border-indigo-950 rounded-xl">
-                        baixo
-                    </button>
+                <div className="flex text-center items-center flex-col">
+                    <h1 className="text-4xl sm:text-2xl font-bold uppercase tracking-widest">Web Developer</h1>
+                    <h1 className="text-4xl sm:text-8xl font-bold mb-6">Mário Ponte</h1>
+                    <h5 className="text-lg font-medium w-fit sm:w-[400px] mb-6">I create web solutions that make your ideas come to life. Let&apos;s build something amazing together.</h5>
+                    <Link href="#about" className="flex items-center justify-center w-40 my-2 p-2 hover:bg-gradient-to-r rounded-xl border-[1px] border-indigo-950 hover:bg-indigo-950 hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-indigo-950 transition duration-300">
+                        <BsChevronCompactDown />
+                    </Link>
+                    <HeroContacts/>
                 </div>
             </Container>
         </section>
