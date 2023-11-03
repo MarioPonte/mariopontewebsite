@@ -3,8 +3,8 @@
 import { LogoMario } from "@/app/SVGFiles";
 import Link from "next/link";
 import { useState } from "react";
-import { NavbarList } from "./NavbarList";
 import NavbarMenuBtn from "./NavbarMenuBtn";
+import NavbarList from "./NavbarList";
 
 export const Navbar = () => {
     const [navbar, setNavbar] = useState(false);
@@ -19,7 +19,7 @@ export const Navbar = () => {
                 </div>
                 <div>
                     <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'block' : 'hidden'}`} >
-                        <NavbarList/>
+                        <NavbarList onClick={() => { if (navbar) setNavbar(!navbar) }}/>
                     </div>
                 </div>
             </div>
