@@ -15,3 +15,8 @@ export const fadeUpAnimation = {
     whileInView: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: 50 },
 }
+
+export const heroAnimation = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+}
