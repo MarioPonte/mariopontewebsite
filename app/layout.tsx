@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='light' style={{colorScheme: 'light'}}>
+    <html lang="en" className='light' style={{colorScheme: 'light', scrollBehavior: 'smooth'}}>
       <body className="bg-indigo-50 text-indigo-950 dark:bg-indigo-950 dark:text-white">
         <Providers>
           <ClientOnly>

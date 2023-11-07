@@ -4,10 +4,16 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
 import { LogoMario } from "../../SVGFiles";
+import { motion } from "framer-motion";
+import { fadeUpAnimation } from "@/app/lib/animations";
 
 export default function ContactsCard() {
     return (
-        <div className="bg-indigo-200 dark:bg-slate-950 border border-indigo-200 dark:border-slate-950 hover:border-indigo-950 dark:hover:border-white p-10 rounded-xl text-xs sm:text-xs md:text-lg text-indigo-950 dark:text-neutral-400 h-fit flex flex-wrap gap-8 transition duration-500">
+        <motion.div 
+            className="bg-indigo-200 dark:bg-slate-950 border border-indigo-200 dark:border-slate-950 hover:border-indigo-950 dark:hover:border-white p-10 rounded-xl text-xs sm:text-xs md:text-lg text-indigo-950 dark:text-neutral-400 h-fit flex flex-wrap gap-8 transition duration-500"
+            {...fadeUpAnimation}
+            transition={{ duration: 0.5, delay: 0.1 }}
+        >
             <div className="space-y-6">
                 <a href="tel:964158481" aria-label="Phone Number: (+351) 964 158 481" className="flex w-fit items-center hover:text-indigo-800 dark:hover:text-white cursor-pointer duration-300">
                     <FaPhoneAlt className="mr-2" />(+351) 964 158 481
@@ -19,9 +25,7 @@ export default function ContactsCard() {
                     <IoLocationSharp className="mr-2" />Vale Judeu, Loulé
                 </a>
             </div>
-            <div>
-                <LogoMario className="h-20 sm:h-20 md:h-32 fill-indigo-950 dark:fill-white" />
-            </div>
-        </div>
+            <LogoMario className="h-20 sm:h-20 md:h-32 fill-indigo-950 dark:fill-white" />
+        </motion.div>
     )
 }
