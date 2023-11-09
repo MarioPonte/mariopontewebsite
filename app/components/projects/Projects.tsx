@@ -2,12 +2,11 @@
 
 import Container from "../Container";
 import ProjectsCard from "./ProjectsCard";
-import { BsGithub } from 'react-icons/bs';
 import SectionInfo from "../SectionInfo";
 import { Project } from "@/app/types/projects";
-import LinkBtn from "../inputs/LinkBtn";
 import { fadeUpAnimation } from "@/app/lib/animations";
 import { motion } from "framer-motion";
+import { ProjectsSecLinks } from "./ProjectSecLinks";
 
 type ProjectsProps = {
     projects: Project[]
@@ -34,9 +33,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
                         </motion.div>
                     ))}
                 </div>
-                <div className="mt-8 flex items-center justify-center text-center">
-                    <LinkBtn name="See all the projects" href="https://github.com/MarioPonte?tab=repositories" target="_blank" icon={BsGithub} />
-                </div>
+                <ProjectsSecLinks/>
             </Container>
         </section>
     )

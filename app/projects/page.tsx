@@ -30,7 +30,7 @@ export default async function Projects() {
                         inspiration in my work and see how my skills and knowledge can be useful for your own projects."
         />
         <div className="mb-8 flex items-center justify-center text-center">
-          <LinkBtn name="Back to Home" href="/" icon={TbArrowNarrowLeft} />
+          <LinkBtn name="Back to Home" href="/#projects" icon={TbArrowNarrowLeft} />
         </div>
         <div className="grid gap-8 lg:grid-cols-3">
           {projects.map(project => (

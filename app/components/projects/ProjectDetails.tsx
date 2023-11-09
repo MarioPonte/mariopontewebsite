@@ -44,7 +44,7 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
                         )}
                     </div>
                     <div className="mt-8">
-                        <LinkBtn name="Back to Home" href="/" icon={TbArrowNarrowLeft} />
+                        <LinkBtn name="Back to Home" href="/#projects" icon={TbArrowNarrowLeft} />
                     </div>
                 </div>
             </div>
